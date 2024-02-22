@@ -16,6 +16,7 @@ public class Main {
 
         int first=0;
         String result="";
+        int[] length=new int[array.length];
         int count=0;
         int index=0;
         int c=0;
@@ -47,6 +48,7 @@ public class Main {
                         boolean fl3=help_task32(strings,result,count);
                         if(fl3==true){
                             strings[count]=result;
+                            length[count]=c;
                             result="";
                             array2=null;
                             array2 = new int[array.length];
@@ -74,6 +76,7 @@ public class Main {
                         boolean fl3=help_task32(strings,result,count);
                         if(fl3==true){
                             strings[count]=result;
+                            length[count]=c;
                             result="";
                             array2=null;
                             array2 = new int[array.length];
@@ -97,66 +100,86 @@ public class Main {
                 }
             }
 
-        if(Math.abs(array[i]-array[i+1])<=A){
-            if(flag==false){
-                array2[c]=array[i];
-                array2[c+1]=array[i+1];
-                result=result+array[i]+array[i+1];
-                first=i;
-                flag=true;
-                c+=2;
-                i+=1;
+            if(Math.abs(array[i]-array[i+1])<=A){
+                if(flag==false){
+                    array2[c]=array[i];
+                    array2[c+1]=array[i+1];
+                    result=result+array[i]+array[i+1];
+                    first=i;
+                    flag=true;
+                    c+=2;
+                    i+=1;
 
-            }
-            else{
-                //fl2=help_task32(array2,array[i],array[i+1],A,c);
-                for(int k=0;k<c;k++){
+                }
+                else{
+                    //fl2=help_task32(array2,array[i],array[i+1],A,c);
+                    for(int k=0;k<c;k++){
 
-                    if(Math.abs(array2[k]-array[i])<=A){
-                        continue;
+                        if(Math.abs(array2[k]-array[i])<=A){
+                            continue;
+                        }
+                        else{
+                            fl2=false;
+                            if(k!=c-1){
+                                i=first;
+                            }
+                            break;
+                        }
+                    }
+                    if(fl2==true){
+                        array2[c]=array[i];
+                        result=result+array[i];
+                        c+=1;
+
                     }
                     else{
-                        fl2=false;
-                        if(k!=c-1){
-                            i=first;
-                        }
-                        break;
-                    }
-                }
-                if(fl2==true){
-                    array2[c]=array[i];
-                    result=result+array[i];
-                    c+=1;
+                        if(result!=""){
+                            boolean fl3=help_task32(strings,result,count);
+                            if(fl3==true){
+                                strings[count]=result;
+                                length[count]=c;
+                                result="";
+                                array2=null;
+                                array2 = new int[array.length];
+                                flag=false;
+                                fl2=true;
+                                c=0;
+                                count++;
+                            }
 
-                }
-                else{
-                    if(result!=""){
-                        boolean fl3=help_task32(strings,result,count);
-                        if(fl3==true){
-                            strings[count]=result;
-                            result="";
-                            array2=null;
-                            array2 = new int[array.length];
-                            flag=false;
-                            fl2=true;
-                            c=0;
-                            count++;
                         }
+
 
                     }
 
 
                 }
-
 
             }
 
         }
-
-    }
-        for(int i=0;i<strings.length;i++){
+        int max=0;
+        max=length[0];
+        for(int i=1;i<count;i++){
             if(strings[i]!=null){
-                System.out.println(strings[i]);
+                if(max<length[i]){
+                    max=length[i];
+                }
+            }
+        }
+        int ind=0;
+        int cnt=0;
+        for(int i=0;i<count;i++){
+            int len=length[i];
+            if(max==len){
+                ind=i;
+                cnt++;
+                if(cnt==2){
+                    System.out.println("Индекс первого элемента: "+ind);
+                    System.out.println("Число элементов: "+length[i]);
+                    System.out.println(strings[i]);
+                    break;
+                }
             }
 
         }
@@ -237,7 +260,7 @@ public class Main {
         int v;
         Scanner in = new Scanner(System.in);
         while (true) {
-            System.out.println("1)Задать элементы массива самому\n2)Контрольный пример\n3)Задание 32\n0)Выход");
+            System.out.println("\n1)Задать элементы массива самому\n2)Контрольный пример\n3)Задание 32\n0)Выход");
             v = in.nextInt();
             switch (v) {
                 case 1:
@@ -256,7 +279,7 @@ public class Main {
                     for (int i = coor1[0]; i < (coor1[0] + coor1[1]); i++) {
                         System.out.print(arr[i] + " ");
                     }
-                    System.out.println();
+
                     break;
 
 
@@ -268,10 +291,17 @@ public class Main {
                     //int[] array = {3, 7, 3, 3, 7, 4, 6, 7, 7, 7, 7, 1, 4, 7};
 
                     int[] coor = getLongest(array);
-
+                    int count=0;
+                    boolean flag3=true;
                     for (int i = coor[0]; i < (coor[0] + coor[1]); i++) {
+                        if(flag3==true){
+                            System.out.println("Индекс первого элемента: "+i);
+                            flag3=false;
+                        }
                         System.out.print(array[i] + " ");
+                        count++;
                     }
+                    System.out.println("Длина последовательности: "+ count);
                     break;
                 case 3:
                     int SIZE;
@@ -299,4 +329,3 @@ public class Main {
         }
     }
 }
-
