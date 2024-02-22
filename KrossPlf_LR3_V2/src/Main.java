@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.OptionalInt;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -184,76 +186,88 @@ public class Main {
 
         }
     }
-    public static int[] getLongest(final int[] array) {
-        int posAux = 0;
-        int lonAux = 0;
-
-        int pos = 0;
-        int lon = 0;
-
-        int others = 0;
-
-        boolean inSame = false;
-
-        int idx = 0;
-
-        while (idx < (array.length - 1)) {
-            if (!inSame) {
-                if (array[idx] == array[idx + 1]) {
-                    inSame = true;
-                    posAux = idx;
-                    lonAux = 2;
-                    idx++;
-
-                    if (posAux > 0) {
-                        posAux--;
-                        lonAux++;
-                        others++;
-                    }
-                } else {
-                    idx++;
+    public static void getLongest(final int[] array) {
+        int probel=0;
+        String res="";
+        int value=0
+                ;
+        String[] strings= new String[array.length];
+        int count=0;
+        int len=0;
+        int first=array[0];
+        int[] length=new int[array.length];
+        int first_index=0;
+         boolean flag=false;
+         int ind=0;
+        for(int i=0;i< array.length;i++){
+            if(first==array[i]){
+                res=res+array[i];
+                count++;
+                if(i!=first_index){
+                    flag=true;
+                    ind=i;
                 }
-            } else {
-                if (array[idx] == array[idx + 1]) {
-                    lonAux++;
-                    idx++;
-                } else {
-                    if (others == 2) {
-                        if (lon < lonAux) {
-                            pos = posAux;
-                            lon = lonAux;
-                        }
+                if(i== array.length-1){
+                    strings[len]=res;
+                    length[len]=count+probel;
+                    len++;
+                }
 
-                        inSame = false;
-                        posAux = 0;
-                        lonAux = 0;
-                        others = 0;
-                        idx++;
-                    } else {
-                        others++;
-
-                        if ((idx < (array.length - 2)) && (array[idx] == array[idx + 2])) {
-                            lonAux += 2;
-                            idx += 2;
-                        } else {
-                            lonAux++;
-
-                            if (lon < lonAux) {
-                                pos = posAux;
-                                lon = lonAux;
-                            }
-
-                            inSame = false;
-                            posAux = 0;
-                            lonAux = 0;
-                            others = 0;
-                            idx++;
-                        }
+            }
+            else{
+                if(i==array.length-1&&probel!=2){
+                    res=res+array[i];
+                    strings[len]=res;
+                    length[len]=count+probel;
+                    len++;
+                    res="";
+                }
+                if(probel==2 ){
+                    if(count>=2){
+                        strings[len]=res;
+                        length[len]=count+probel;
+                        len++;
+                        res="";
+                        count=0;
+                        probel=0;
+                        first_index+=1;
+                        first=array[first_index];
+                        i=-1;
                     }
+                    else{
+                        res="";
+                        count=0;
+                        probel=0;
+                        first_index+=1;
+                        first=array[first_index];
+                        if(first_index>=2){
+                            i=first_index-3;
+                        }
+                        else{
+                            i=-1;
+                        }
+
+                    }
+                }
+                else{
+                    probel++;
+                    res=res+array[i];
                 }
             }
         }
-        return new int[]{pos, lon};
+        int max=max=length[0];;
+        for(int i=1;i<len;i++){
+
+            if(max<length[i]){
+                max=length[i];
+            }
+        }
+        for(int i=0;i<len;i++){
+            if(max==length[i]){
+                System.out.println(strings[i]);
+                break;
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -269,16 +283,12 @@ public class Main {
                     System.out.println("Укажите размер массива");
                     Size=in.nextInt();
                     int[] arr=new int[Size];
-                    for(int i=0;i<arr.length-1;i++){
+                    for(int i=0;i<arr.length;i++){
                         System.out.print("Индекс: "+i+" значение: ");
                         value=in.nextInt();
                         arr[i]=value;
                     }
-                    int[] coor1 = getLongest(arr);
-
-                    for (int i = coor1[0]; i < (coor1[0] + coor1[1]); i++) {
-                        System.out.print(arr[i] + " ");
-                    }
+                    getLongest(arr);
 
                     break;
 
@@ -290,17 +300,9 @@ public class Main {
                     //int[] array = {6, 3, 3, 7, 3, 3, 7, 4, 6, 7, 7, 7, 7, 1};
                     //int[] array = {3, 7, 3, 3, 7, 4, 6, 7, 7, 7, 7, 1, 4, 7};
 
-                    int[] coor = getLongest(array);
+                    getLongest(array);
                     int count=0;
                     boolean flag3=true;
-                    for (int i = coor[0]; i < (coor[0] + coor[1]); i++) {
-                        if(flag3==true){
-                            System.out.println("Индекс первого элемента: "+i);
-                            flag3=false;
-                        }
-                        System.out.print(array[i] + " ");
-                        count++;
-                    }
                     System.out.println("Длина последовательности: "+ count);
                     break;
                 case 3:
