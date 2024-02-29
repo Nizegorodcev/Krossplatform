@@ -1,0 +1,41 @@
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\bin\Debug\ТИПиС 3.exe.config
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\bin\Debug\ТИПиС 3.exe
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\bin\Debug\ТИПиС 3.pdb
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.csproj.AssemblyReference.cache
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.csproj.SuggestedBindingRedirects.cache
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Form1.resources
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Form2.resources
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Form3.resources
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Form4.resources
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Properties.Resources.resources
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.csproj.GenerateResource.cache
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.csproj.CoreCompileInputs.cache
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.exe
+C:\Users\student\Desktop\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.pdb
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.csproj.AssemblyReference.cache
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Form1.resources
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Form2.resources
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Form3.resources
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Form4.resources
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Properties.Resources.resources
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.csproj.GenerateResource.cache
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.csproj.CoreCompileInputs.cache
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.exe
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.pdb
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\bin\Debug\ТИПиС 3.exe.config
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\bin\Debug\ТИПиС 3.exe
+C:\Users\NATA\source\repos\ТИПиС 3\ТИПиС 3\bin\Debug\ТИПиС 3.pdb
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\bin\Debug\ТИПиС 3.exe.config
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\bin\Debug\ТИПиС 3.exe
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\bin\Debug\ТИПиС 3.pdb
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.csproj.AssemblyReference.cache
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.csproj.SuggestedBindingRedirects.cache
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Form1.resources
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Form2.resources
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Form3.resources
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Form4.resources
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС_3.Properties.Resources.resources
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.csproj.GenerateResource.cache
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.csproj.CoreCompileInputs.cache
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.exe
+C:\Users\student\source\repos\ТИПиС 3\ТИПиС 3\obj\Debug\ТИПиС 3.pdb

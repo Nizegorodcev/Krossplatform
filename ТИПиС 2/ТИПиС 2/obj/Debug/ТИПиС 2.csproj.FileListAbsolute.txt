@@ -1,0 +1,25 @@
+C:\Users\NATA\source\repos\ТИПиС 2\ТИПиС 2\bin\Debug\ТИПиС 2.exe.config
+C:\Users\NATA\source\repos\ТИПиС 2\ТИПиС 2\bin\Debug\ТИПиС 2.exe
+C:\Users\NATA\source\repos\ТИПиС 2\ТИПиС 2\bin\Debug\ТИПиС 2.pdb
+C:\Users\NATA\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС 2.csproj.AssemblyReference.cache
+C:\Users\NATA\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС_2.Form1.resources
+C:\Users\NATA\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС_2.Form2.resources
+C:\Users\NATA\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС_2.Properties.Resources.resources
+C:\Users\NATA\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС 2.csproj.GenerateResource.cache
+C:\Users\NATA\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС 2.csproj.CoreCompileInputs.cache
+C:\Users\NATA\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС 2.exe
+C:\Users\NATA\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС 2.pdb
+C:\Users\NATA\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС_2.Form3.resources
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС 2.csproj.AssemblyReference.cache
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС 2.csproj.SuggestedBindingRedirects.cache
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС_2.Form1.resources
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС_2.Form2.resources
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС_2.Form3.resources
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС_2.Properties.Resources.resources
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС 2.csproj.GenerateResource.cache
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС 2.csproj.CoreCompileInputs.cache
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС 2.exe
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\obj\Debug\ТИПиС 2.pdb
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\bin\Debug\ТИПиС 2.exe.config
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\bin\Debug\ТИПиС 2.exe
+C:\Users\student\source\repos\ТИПиС 2\ТИПиС 2\bin\Debug\ТИПиС 2.pdb
