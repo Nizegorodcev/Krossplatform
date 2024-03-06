@@ -1,5 +1,3 @@
-import java.util.Arrays;
-import java.util.OptionalInt;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -18,7 +16,6 @@ public class Main {
 
         int first=0;
         String result="";
-        int[] length=new int[array.length];
         int count=0;
         int index=0;
         int c=0;
@@ -50,7 +47,6 @@ public class Main {
                         boolean fl3=help_task32(strings,result,count);
                         if(fl3==true){
                             strings[count]=result;
-                            length[count]=c;
                             result="";
                             array2=null;
                             array2 = new int[array.length];
@@ -78,7 +74,6 @@ public class Main {
                         boolean fl3=help_task32(strings,result,count);
                         if(fl3==true){
                             strings[count]=result;
-                            length[count]=c;
                             result="";
                             array2=null;
                             array2 = new int[array.length];
@@ -102,179 +97,147 @@ public class Main {
                 }
             }
 
-            if(Math.abs(array[i]-array[i+1])<=A){
-                if(flag==false){
+        if(Math.abs(array[i]-array[i+1])<=A){
+            if(flag==false){
+                array2[c]=array[i];
+                array2[c+1]=array[i+1];
+                result=result+array[i]+array[i+1];
+                first=i;
+                flag=true;
+                c+=2;
+                i+=1;
+
+            }
+            else{
+                //fl2=help_task32(array2,array[i],array[i+1],A,c);
+                for(int k=0;k<c;k++){
+
+                    if(Math.abs(array2[k]-array[i])<=A){
+                        continue;
+                    }
+                    else{
+                        fl2=false;
+                        if(k!=c-1){
+                            i=first;
+                        }
+                        break;
+                    }
+                }
+                if(fl2==true){
                     array2[c]=array[i];
-                    array2[c+1]=array[i+1];
-                    result=result+array[i]+array[i+1];
-                    first=i;
-                    flag=true;
-                    c+=2;
-                    i+=1;
+                    result=result+array[i];
+                    c+=1;
 
                 }
                 else{
-                    //fl2=help_task32(array2,array[i],array[i+1],A,c);
-                    for(int k=0;k<c;k++){
-
-                        if(Math.abs(array2[k]-array[i])<=A){
-                            continue;
+                    if(result!=""){
+                        boolean fl3=help_task32(strings,result,count);
+                        if(fl3==true){
+                            strings[count]=result;
+                            result="";
+                            array2=null;
+                            array2 = new int[array.length];
+                            flag=false;
+                            fl2=true;
+                            c=0;
+                            count++;
                         }
-                        else{
-                            fl2=false;
-                            if(k!=c-1){
-                                i=first;
-                            }
-                            break;
-                        }
-                    }
-                    if(fl2==true){
-                        array2[c]=array[i];
-                        result=result+array[i];
-                        c+=1;
-
-                    }
-                    else{
-                        if(result!=""){
-                            boolean fl3=help_task32(strings,result,count);
-                            if(fl3==true){
-                                strings[count]=result;
-                                length[count]=c;
-                                result="";
-                                array2=null;
-                                array2 = new int[array.length];
-                                flag=false;
-                                fl2=true;
-                                c=0;
-                                count++;
-                            }
-
-                        }
-
 
                     }
 
 
                 }
 
+
             }
 
         }
-        int max=0;
-        max=length[0];
-        for(int i=1;i<count;i++){
+
+    }
+        for(int i=0;i<strings.length;i++){
             if(strings[i]!=null){
-                if(max<length[i]){
-                    max=length[i];
-                }
-            }
-        }
-        int ind=0;
-        int cnt=0;
-        for(int i=0;i<count;i++){
-            int len=length[i];
-            if(max==len){
-                ind=i;
-                cnt++;
-                if(cnt==2){
-                    System.out.println("Индекс первого элемента: "+ind);
-                    System.out.println("Число элементов: "+length[i]);
-                    System.out.println(strings[i]);
-                    break;
-                }
+                System.out.println(strings[i]);
             }
 
         }
     }
-    public static void getLongest(final int[] array) {
-        int probel=0;
-        String res="";
-        int value=0
-                ;
-        String[] strings= new String[array.length];
-        int count=0;
-        int len=0;
-        int first=array[0];
-        int[] length=new int[array.length];
-        int first_index=0;
-         boolean flag=false;
-         int ind=0;
-        for(int i=0;i< array.length;i++){
-            if(first==array[i]){
-                res=res+array[i];
-                count++;
-                if(i!=first_index){
-                    flag=true;
-                    ind=i;
-                }
-                if(i== array.length-1){
-                    strings[len]=res;
-                    length[len]=count+probel;
-                    len++;
-                }
+    public static int[] getLongest(final int[] array) {
+        int posAux = 0;
+        int lonAux = 0;
 
-            }
-            else{
-                if(i==array.length-1&&probel!=2){
-                    res=res+array[i];
-                    strings[len]=res;
-                    length[len]=count+probel;
-                    len++;
-                    res="";
-                }
-                if(probel==2 ){
-                    if(count>=2){
-                        strings[len]=res;
-                        length[len]=count+probel;
-                        len++;
-                        res="";
-                        count=0;
-                        probel=0;
-                        first_index+=1;
-                        first=array[first_index];
-                        i=-1;
+        int pos = 0;
+        int lon = 0;
+
+        int others = 0;
+
+        boolean inSame = false;
+
+        int idx = 0;
+
+        while (idx < (array.length - 1)) {
+            if (!inSame) {
+                if (array[idx] == array[idx + 1]) {
+                    inSame = true;
+                    posAux = idx;
+                    lonAux = 2;
+                    idx++;
+
+                    if (posAux > 0) {
+                        posAux--;
+                        lonAux++;
+                        others++;
                     }
-                    else{
-                        res="";
-                        count=0;
-                        probel=0;
-                        first_index+=1;
-                        first=array[first_index];
-                        if(first_index>=2){
-                            i=first_index-3;
-                        }
-                        else{
-                            i=-1;
+                } else {
+                    idx++;
+                }
+            } else {
+                if (array[idx] == array[idx + 1]) {
+                    lonAux++;
+                    idx++;
+                } else {
+                    if (others == 2) {
+                        if (lon < lonAux) {
+                            pos = posAux;
+                            lon = lonAux;
                         }
 
+                        inSame = false;
+                        posAux = 0;
+                        lonAux = 0;
+                        others = 0;
+                        idx++;
+                    } else {
+                        others++;
+
+                        if ((idx < (array.length - 2)) && (array[idx] == array[idx + 2])) {
+                            lonAux += 2;
+                            idx += 2;
+                        } else {
+                            lonAux++;
+
+                            if (lon < lonAux) {
+                                pos = posAux;
+                                lon = lonAux;
+                            }
+
+                            inSame = false;
+                            posAux = 0;
+                            lonAux = 0;
+                            others = 0;
+                            idx++;
+                        }
                     }
                 }
-                else{
-                    probel++;
-                    res=res+array[i];
-                }
             }
         }
-        int max=max=length[0];;
-        for(int i=1;i<len;i++){
-
-            if(max<length[i]){
-                max=length[i];
-            }
-        }
-        for(int i=0;i<len;i++){
-            if(max==length[i]){
-                System.out.println(strings[i]);
-                break;
-            }
-        }
+        return new int[]{pos, lon};
     }
 
     public static void main(String[] args) {
         int v;
         Scanner in = new Scanner(System.in);
         while (true) {
-            System.out.println("\n1)Задать элементы массива самому\n2)Контрольный пример\n3)Задание 32\n0)Выход");
+            System.out.println("1)Задать элементы массива самому\n2)Контрольный пример\n3)Задание 32\n0)Выход");
             v = in.nextInt();
             switch (v) {
                 case 1:
@@ -283,13 +246,17 @@ public class Main {
                     System.out.println("Укажите размер массива");
                     Size=in.nextInt();
                     int[] arr=new int[Size];
-                    for(int i=0;i<arr.length;i++){
+                    for(int i=0;i<arr.length-1;i++){
                         System.out.print("Индекс: "+i+" значение: ");
                         value=in.nextInt();
                         arr[i]=value;
                     }
-                    getLongest(arr);
+                    int[] coor1 = getLongest(arr);
 
+                    for (int i = coor1[0]; i < (coor1[0] + coor1[1]); i++) {
+                        System.out.print(arr[i] + " ");
+                    }
+                    System.out.println();
                     break;
 
 
@@ -300,10 +267,11 @@ public class Main {
                     //int[] array = {6, 3, 3, 7, 3, 3, 7, 4, 6, 7, 7, 7, 7, 1};
                     //int[] array = {3, 7, 3, 3, 7, 4, 6, 7, 7, 7, 7, 1, 4, 7};
 
-                    getLongest(array);
-                    int count=0;
-                    boolean flag3=true;
-                    System.out.println("Длина последовательности: "+ count);
+                    int[] coor = getLongest(array);
+
+                    for (int i = coor[0]; i < (coor[0] + coor[1]); i++) {
+                        System.out.print(array[i] + " ");
+                    }
                     break;
                 case 3:
                     int SIZE;
@@ -331,3 +299,4 @@ public class Main {
         }
     }
 }
+
